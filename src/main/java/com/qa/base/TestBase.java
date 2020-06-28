@@ -23,43 +23,38 @@ public class TestBase {
 		// read properties file
 		try{
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "src/main/java/com/qa/config/config.properties");
-			prop.load(ip);
-		}
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/qa/config/config.properties");
+			prop.load(ip);		
+		}	
 		catch(FileNotFoundException e){
 			e.printStackTrace();
-		}
+			}
 		catch(IOException e){
 			e.printStackTrace();
-		}
-	}
-		
-	// initilization method
-		public static void initialization(){
-			
-			String browserName = prop.getProperty("browser");
-			
-			if(browserName.equals("Chrome")){
-				System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Driver\\chrome driver 83.0.4103.39\\chromedriver_win32\\chromedriver.exe");
-				driver = new ChromeDriver();
+		}		
 			}
-			
-			else if(browserName.equals("FF")){
-				System.getProperty("webdriver.gecko.driver", "D:\\Selenium\\Driver\\geckodriver-v0.26.0-win64\\geckodriver.exe");
-				driver = new FirefoxDriver();
-			}
-			
-			driver.manage().window().maximize();
-			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().implicitlyWait(TestUtility.ImplicitWait, TimeUnit.SECONDS);
-			driver.manage().timeouts().pageLoadTimeout(TestUtility.PageLoadTimeout, TimeUnit.SECONDS);
 	
-			driver.get(prop.getProperty("url"));
-		}
-		
-
-			
-		
+	// intialization method
+	public static void intilialization(){
+		String browserName = prop.getProperty("browser");
+	
+	if(browserName.equals("chrome")){
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Driver\\chrome driver 83.0.4103.39\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+	}
+	else if(browserName.equals("FF")){
+		System.setProperty("webdriver.gecko.driver", "D:\\Selenium\\Driver\\geckodriver-v0.26.0-win64\\geckodriver.exe");
+		driver = new FirefoxDriver();
+	}
+	
+	driver.manage().window().maximize();
+	driver.manage().deleteAllCookies();
+	driver.manage().timeouts().pageLoadTimeout(TestUtility.Page_Load_Timeout, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(TestUtility.Implicit_Wait, TimeUnit.SECONDS);
+	
+	driver.get(prop.getProperty("url"));
+	
+	
 	}
 
-
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="16172" started-at="2020-06-28T11:04:05Z" finished-at="2020-06-28T11:04:22Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="16172" started-at="2020-06-28T11:04:05Z" finished-at="2020-06-28T11:04:22Z">
+      <class name="com.qa.testcases.HomePageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.testcases.HomePageTest@e580929]" name="setup" is-config="true" duration-ms="15383" started-at="2020-06-28T16:34:05Z" finished-at="2020-06-28T16:34:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyHomePageTitleTest()[pri:1, instance:com.qa.testcases.HomePageTest@e580929]" name="verifyHomePageTitleTest" duration-ms="18" started-at="2020-06-28T16:34:21Z" finished-at="2020-06-28T16:34:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageTitleTest -->
+        <test-method status="PASS" signature="verifyLogoTest()[pri:2, instance:com.qa.testcases.HomePageTest@e580929]" name="verifyLogoTest" duration-ms="61" started-at="2020-06-28T16:34:21Z" finished-at="2020-06-28T16:34:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogoTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.testcases.HomePageTest@e580929]" name="tearDown" is-config="true" duration-ms="699" started-at="2020-06-28T16:34:21Z" finished-at="2020-06-28T16:34:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.testcases.HomePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
